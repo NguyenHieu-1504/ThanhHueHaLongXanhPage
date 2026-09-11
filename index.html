@@ -160,8 +160,55 @@
   .advisor-info b{display:block;font-family:'Fraunces', serif;font-size:15.5px;color:var(--ocean);}
   .advisor-info span{display:block;font-size:12px;color:var(--ink-soft);margin-top:2px;}
   .advisor-card .btn-solid{margin-left:14px;padding:9px 16px;font-size:13px;}
-  @media(max-width:760px){.trust-inner{flex-direction:column;align-items:stretch;gap:6px;padding:4px 0;margin-top:-44px;}.trust-logos{justify-content:center;text-align:center;}.trust-logos img:nth-of-type(3){transform:translateY(-40px);}.advisor-card{justify-content:flex-start;gap:10px;margin-top:-44px;}}
-  @media(max-width:520px){.advisor-card{flex-wrap:wrap;padding:9px 10px;gap:8px;}.advisor-card .btn-solid{margin-left:0;width:100%;margin-top:4px;}}
+  @media(max-width:760px){
+    .trust-inner{flex-direction:column;align-items:stretch;gap:12px;padding:12px 0;margin-top:0;}
+    .trust-logos{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      gap:10px 16px;
+      text-align:center;
+      width:100%;
+    }
+    .trust-logos span{
+      width:100%;
+      margin:0 0 6px;
+      text-align:center;
+      font-size:11px;
+    }
+    /* Tỉ lệ logo mobile: logo 1 vừa, logo 2 & 3 to hơn để cân thị giác */
+    .trust-logos img{
+      width:auto;
+      object-fit:contain;
+      transform:none !important;
+      opacity:.92;
+    }
+    .trust-logos img:nth-of-type(1){
+      height:48px !important;
+      max-height:48px;
+      max-width:34%;
+    }
+    .trust-logos img:nth-of-type(2){
+      height:64px !important;
+      max-height:64px;
+      max-width:30%;
+    }
+    .trust-logos img:nth-of-type(3){
+      height:72px !important;
+      max-height:72px;
+      max-width:30%;
+    }
+    .advisor-card{justify-content:flex-start;gap:10px;margin-top:0;}
+  }
+  @media(max-width:520px){
+    .trust-logos{gap:8px 12px;}
+    .trust-logos img:nth-of-type(1){height:42px !important;max-height:42px;max-width:36%;}
+    .trust-logos img:nth-of-type(2){height:56px !important;max-height:56px;max-width:32%;}
+    .trust-logos img:nth-of-type(3){height:64px !important;max-height:64px;max-width:32%;}
+    .advisor-card{flex-wrap:wrap;padding:9px 10px;gap:8px;}
+    .advisor-card .btn-solid{margin-left:0;width:100%;margin-top:4px;}
+  }
 
   /* section divider */
 
